@@ -11,6 +11,14 @@
 * Note: Some devices have only: system, odm, vendor and product. Oppo/Realme devices can have oppo_product, then use imjtool binary!
 * Shell time:
 ```
+# simg2img the super (Do it only if the Super have Sparse)
+$ ./imjtool super.img extract
+
+# Get the extracted super
+$ mv super.img super.img-old ; mv extracted/* .
+
+# Rename the extracted file to: super.img
+
 # Extract system partition
 $ ./lpunpack --partition=system super.img .
 
